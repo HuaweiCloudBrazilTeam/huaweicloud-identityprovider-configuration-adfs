@@ -40,6 +40,54 @@ This section describes how to install ADFS on a Windows 2016, make sure that you
 3. Open server manager, click Add roles and features, in the Add Roles and Features Wizard that bounces out, Install Type select Role-based or Feature-Based Installation by default, and click Next.
 ![Server Manager](/img/servermanager.png)
 
-4. In the pop-out window , Install Type selects Role-Based or Feature-Based Installation by default, click Next.
-![ADFS Install](adfs-install-01.png)
+4. In the pop-out window , Before you begin, Installation Type and Sever Selection, click Next.
+![ADFS Install](/img/adfs-install-01.png)
+![ADFS Install](/img/adfs-install-02.png)
+![ADFS Install](/img/adfs-install-03.png)
 
+5. Server Roles check Active Directory Federation Services and click Next.
+![ADFS Install](/img/adfs-install-04.png)
+
+6. Features and AD FS click Next by default.
+![ADFS Install](/img/adfs-install-05.png)
+
+7. Confirm, click Install, and start installing ADFS.
+![ADFS Install](/img/adfs-install-06.png)
+![ADFS Install](/img/adfs-install-07.png)
+
+8. When the installation is complete, click the red box in the image below to begin the configuration of the ADFS.
+![ADFS Install](/img/adfs-install-08.png)
+
+9. In the pop-up "Welcome" page, select *create the first federation...* and click Next.
+![ADFS Install](/img/adfs-install-09.png)
+
+10. In Connect to AD DS, click Next.
+![ADFS Install](/img/adfs-install-10.png)
+
+11. On the Specify Service Properties page, select the SSL certificate you created earlier and fill in the display name.
+- Description: SSL certificate Please select the computer name and domain name, for example, select adfs.hwcping.com.br
+![ADFS Install](/img/adfs-install-11.png)
+
+- The Federation Service Name, which is the domain that accesses the Federation Service, records that you need to use in obtaining the Federation Service profile.
+
+- The Federation Service Display Name, the name that appears in the browser interface when the user's browser verifies its identity.
+
+12. Use an existing domain management account in The Specified Service Account.
+![ADFS Install](/img/adfs-install-12.png)
+![ADFS Install](/img/adfs-install-13.png)
+![ADFS Install](/img/adfs-install-14.png)
+
+13. Click Next and leave the default option in Specify Database.
+![ADFS Install](/img/adfs-install-15.png)
+
+14. Click Next in View Selection. *optional*: you can save Powershell script if you want.
+![ADFS Install](/img/adfs-install-16.png)
+
+15. In Prerequisite Check, click Configure.
+![ADFS Install](/img/adfs-install-17.png)
+
+16. When you see "This server was successfully configured," the configuration is successful.
+![ADFS Install](/img/adfs-install-18.png)
+
+
+## Finished ADFS instalation.

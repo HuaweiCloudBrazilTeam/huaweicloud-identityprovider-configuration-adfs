@@ -66,3 +66,6 @@
 
 3. Add users to the respective groups according to the requirements described in this [article](README.md).
 ![ADUC Group](/img/aduc-group-02.png)
+
+
+## Finish Active Directory installation

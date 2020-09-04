@@ -83,6 +83,9 @@ Because the certificate service is required to install ADFS, you need to add the
 ![CA Template](img/ca-template08.png)
 
 
+## Finish ADCS instalation
+
+
 
 
 
