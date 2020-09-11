@@ -248,7 +248,7 @@ ADFS Metadata Link: https://adfs.hwcping.com.br/federationmetadata/2007-06/feder
 5. Click Modify after the identity provider you have created.
 ![HwC IdP Config](/img/hwc-idp-config-03.png)
 
-6. In The Metadata Configuration on the Modify Identity Provider page, upload the downloaded federmetadata.xml from step #2.
+6. In The Metadata Configuration on the Modify Identity Provider page, upload the downloaded federationmetadata.xml from step #2.
 ![HwC IdP Config](/img/hwc-idp-config-04.png)
 
 7. Click Edit Rules to fill in the following rules in the Identity Conversion Rules on the Modify Identity Providers page. For a detailed description of IAM rules, see the [Federal User Identity Rule Conversion Instructions](https://support.huaweicloud.com/intl/en-us/usermanual-iam/iam_08_0006.html).
