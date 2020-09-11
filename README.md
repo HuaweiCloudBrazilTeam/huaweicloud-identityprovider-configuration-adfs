@@ -116,7 +116,10 @@ In AD FS Management Tools and right click on the newly created relying party and
 Use the following settings:
    1. Claim Rule template: Send Claims Using a Custom Rule 
    2. Claim Rule name: CustomRuleAccount01
-   3. Custom Rule: c:[Type =="http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",Issuer == "AD AUTHORITY"]=> add(store = "ActiveDirectory", types =("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"),query = ";sAMAccountName;{0}", param = c.Value);
+   3. Custom Rule: 
+   ```
+   c:[Type =="http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",Issuer == "AD AUTHORITY"]=> add(store = "Active Directory", types =("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"),query = ";sAMAccountName;{0}", param = c.Value);
+   ```
 
 2. Rule 02: Click Add Rules  
 ![ADFS Rules](/img/rule-claims-03.png)
@@ -126,8 +129,10 @@ Use the following settings:
 Use the following settings:
    1. Claim Rule template: Send Claims Using a Custom Rule 
    2. Claim Rule name: CustomRuleAccount02
-   3. Custom Rule: c:[Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"]=> issue(Type ="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, Value = c.Value,ValueType = c.ValueType, Properties["http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/format"]= "urn:oasis:names:tc:SAML:2.0:nameid-format:transient",Properties["http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/spnamequalifier"]= "https://auth.huaweicloud.com/");  
-  
+   3. Custom Rule: 
+   ```
+   c:[Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"]=> issue(Type ="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, Value = c.Value,ValueType = c.ValueType, Properties["http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/format"]= "urn:oasis:names:tc:SAML:2.0:nameid-format:transient",Properties["http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/spnamequalifier"]= "https://auth.huaweicloud.com/");  
+  ```
   
 3. Rule 03: Click Add Rules  
 ![ADFS Rules](/img/rule-claims-06.png)
